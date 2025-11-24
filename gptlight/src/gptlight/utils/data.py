@@ -1,10 +1,10 @@
 from __future__ import annotations
 import urllib.request
 import torch
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 
 class GPTDataset(Dataset):
-    """ GPT Data Loader"""
+    """ GPT Data Set"""
     def __init__(self, txt, tokenizer, max_length, stride):
         
         self.input_ids = []
@@ -22,4 +22,4 @@ class GPTDataset(Dataset):
         return len(self.input_ids)
     
     def __getitem__(self, idx):
-        return self.input_ids[idx], self.target_ids[idx]
+        return self.input_ids[idx], self.target_ids[idx]    
