@@ -1,7 +1,6 @@
 from __future__ import annotations
-import urllib.request
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 
 class GPTDataset(Dataset):
     """ GPT Data Set"""
