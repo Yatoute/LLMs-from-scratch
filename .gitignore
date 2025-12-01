@@ -1,6 +1,6 @@
 .venv
 __pycache__/
 doc
-gptlight/src/gptlight/notebooks/checkpoints/
-**/checkpoints/*.pt
-gptlight/src/gptlight/notebooks/gpt2
+
+gptlight/assets/**
+!gptlight/assets/**/.gitkeep
