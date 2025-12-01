@@ -8,6 +8,11 @@ from gptlight.config import GPTConfig
 from gptlight.models.transformer.normalization import LayerNorm
 from gptlight.models.transformer import GPTTransformerBlock
 
+__all__ = [
+    "GPTConfig"
+    "GPTModel"
+]
+
 class GPTModel(nn.Module):
     
     def __init__(self, cfg:GPTConfig):
@@ -75,7 +80,7 @@ class GPTModel(nn.Module):
             if idx_next == eos_id:
                 break
             
-            idx = torch.cat((idx, idx_next), dim=-1)
+            idx = torch.cat((idx, idx_next), dim=1)
             
         return idx
         

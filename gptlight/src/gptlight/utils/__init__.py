@@ -4,6 +4,14 @@ import tiktoken
 import torch
 from torch.utils.data import DataLoader
 from gptlight.utils.data import GPTDataset
+from gptlight.utils.gpt_download import download_and_load_gpt2, load_gpt2_from_local
+
+__all__ = [
+    "download_and_load_gpt2",
+    "load_gpt2_from_local",
+    "create_dataloader",
+    "generate_text_simple"
+]
 
 def create_dataloader(txt, batch_size=4, max_length=256, stride=128, shuffle=True, drop_last=True, num_workers=0):
     tokenizer = tiktoken.get_encoding("gpt2")

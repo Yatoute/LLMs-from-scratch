@@ -8,10 +8,19 @@ from torch.utils.data import DataLoader
 
 from gptlight.training.loss import llm_loss
 from gptlight.training.checkpoint import save_model, load_model
+from gptlight.training.load_pretrained_weights import load_weights_into_gpt
+
+__all__ = [
+    "llm_loss",
+    "save_model",
+    "load_model",
+    "load_weights_into_gpt",
+    "Trainer",
+]
 
 class Trainer:
     """
-    Generic trainer for GPT-like language models (autoregressive LM).
+    A trainer for GPT-like language models (autoregressive LM).
     """
     
     def __init__(

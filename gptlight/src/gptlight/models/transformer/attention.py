@@ -72,7 +72,7 @@ class MultiHeadAttention(nn.Module):
         self.num_heads = num_heads
         self.head_dim = d_out//num_heads
         self.W_query = nn.Linear(d_in, d_out, bias=qkv_bias)
-        self.W_keys = nn.Linear(d_in, d_out, bias=qkv_bias)
+        self.W_key = nn.Linear(d_in, d_out, bias=qkv_bias)
         self.W_value = nn.Linear(d_in, d_out, bias=qkv_bias)
         self.register_buffer(
             "mask",
@@ -85,7 +85,7 @@ class MultiHeadAttention(nn.Module):
         
         num_batchs, num_tokens, d_in = x.shape
         
-        keys = self.W_keys(x) # -> (num_batchs, num_tokens, d_out=num_heads*head_dim)
+        keys = self.W_key(x) # -> (num_batchs, num_tokens, d_out=num_heads*head_dim)
         queries = self.W_query(x) # -> (num_batchs, num_tokens, d_out=num_heads*head_dim)
         values = self.W_value(x) # -> (num_batchs, num_tokens, d_out=num_heads*head_dim)
         
