@@ -1,7 +1,9 @@
 .venv
 __pycache__/
-doc
+docgit
 
-gptlight/assets/*
-!gptlight/assets/**/.gitkeep
-!gptlight/assets/**/the-verdict.txt
+gptlight/assets/gpt2
+gptlight/assets/checkpoints/*
+gptlight/assets/datasets/*
+!gptlight/assets/checkpoints/.gitkeep
+!gptlight/assets/datasets/the-verdict.txt
