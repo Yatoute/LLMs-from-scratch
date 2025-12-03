@@ -13,8 +13,8 @@ def fetch_verdict_text() -> str:
         Fetch Verdict Text
     """
     
-    url = ("https://raw.githubusercontent.com/rasbt/"
-        "LLMs-from-scratch/main/ch02/01_main-chapter-code/"
+    url = ("https://github.com/Yatoute/"
+        "gpt-light/tree/main/gptlight/assets/datasets"
         "the-verdict.txt")
 
     with urllib.request.urlopen(url) as response:

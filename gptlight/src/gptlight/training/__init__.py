@@ -6,12 +6,13 @@ import torch.nn as nn
 from torch import Tensor
 from torch.utils.data import DataLoader
 
-from .loss import llm_loss
+from .loss import llm_loss, classification_loss
 from .checkpoint import save_model, load_model
 from .load_pretrained_weights import load_weights_into_gpt
 
 __all__ = [
     "llm_loss",
+    "classification_loss",
     "save_model",
     "load_model",
     "load_weights_into_gpt",

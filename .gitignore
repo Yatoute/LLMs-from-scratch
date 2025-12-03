@@ -4,3 +4,4 @@ doc
 
 gptlight/assets/*
 !gptlight/assets/**/.gitkeep
+!gptlight/assets/datasets/the-verdict.txt

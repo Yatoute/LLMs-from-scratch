@@ -17,8 +17,8 @@ class ClassifcationDataset(Dataset):
         pad_token_id:int=50256
     )-> None:
         
-        self.input_texts = input_texts
-        self.target_labels = target_labels
+        self.input_texts = list(input_texts)
+        self.target_labels = list(target_labels)
         
         self.encoded_texts = [
             tokenizer.encode(text).tolist() for text in self.input_texts
